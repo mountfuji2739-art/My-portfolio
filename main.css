@@ -1,0 +1,896 @@
+
+/* =========================================
+   MY PERSONAL PORTFOLIO
+   Custom styling for all seven pages
+   ========================================= */
+
+
+/* 1. FONTS AND GENERAL SETTINGS */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #24232a;
+    background: #fffdfb;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 2. MAIN PAGE WRAPPER */
+
+#page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* 3. HEADER AND GLASS NAVIGATION */
+
+#header {
+    width: min(94%, 1400px);
+    margin: 25px auto 20px;
+    padding: 17px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(190, 190, 205, 0.35);
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(50, 50, 70, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: #30303b;
+    white-space: nowrap;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#nav label {
+    display: inline-block;
+    padding: 9px 13px;
+    border-radius: 12px;
+    color: #4b4b56;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#nav label:hover {
+    background: rgba(180, 180, 205, 0.18);
+    color: #222230;
+}
+
+
+/* Active navigation item */
+
+#page-home:checked ~ #page-wrapper #nav label[for="page-home"],
+#page-about:checked ~ #page-wrapper #nav label[for="page-about"],
+#page-education:checked ~ #page-wrapper #nav label[for="page-education"],
+#page-skills:checked ~ #page-wrapper #nav label[for="page-skills"],
+#page-projects:checked ~ #page-wrapper #nav label[for="page-projects"],
+#page-achievements:checked ~ #page-wrapper #nav label[for="page-achievements"],
+#page-contact:checked ~ #page-wrapper #nav label[for="page-contact"] {
+    background: rgba(180, 180, 205, 0.25);
+    color: #20202b;
+}
+
+
+/* 4. COMMON PAGE LAYOUT */
+
+.page-view {
+    position: relative;
+    width: min(92%, 1200px);
+    min-height: 690px;
+    margin: 25px auto;
+    padding: 65px 55px;
+    border-radius: 30px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.page-view > * {
+    position: relative;
+    z-index: 1;
+}
+
+.page-view > h2 {
+    font-size: 39px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.page-view > p {
+    text-align: center;
+    color: #5c5b65;
+    margin-bottom: 40px;
+}
+
+
+/* 5. HOME PAGE — PEARL, PINK AND POWDER BLUE */
+
+.page-home {
+    background:
+        radial-gradient(ellipse at 10% 15%, rgba(255, 207, 222, 0.55), transparent 34%),
+        radial-gradient(ellipse at 90% 85%, rgba(193, 220, 246, 0.55), transparent 38%),
+        linear-gradient(135deg, #fffdfb, #fff9fc 55%, #f8fbff);
+}
+
+/* Home-only moving shimmer */
+
+.page-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 35%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0.1) 65%,
+        transparent 100%
+    );
+    background-size: 220% 100%;
+    animation: homeShimmer 9s linear infinite;
+    opacity: 0.65;
+    mask-image: linear-gradient(
+        to right,
+        black,
+        transparent 32%,
+        transparent 68%,
+        black
+    );
+}
+
+@keyframes homeShimmer {
+    from {
+        background-position: 120% 0;
+    }
+    to {
+        background-position: -120% 0;
+    }
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    min-height: 390px;
+}
+
+.home-introduction {
+    flex: 1;
+}
+
+.home-introduction h2 {
+    color: #777184;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.home-introduction h1 {
+    color: #292733;
+    font-size: clamp(42px, 6vw, 68px);
+    margin-bottom: 12px;
+}
+
+.home-introduction p {
+    color: #666575;
+    font-size: 18px;
+}
+
+.home-image {
+    flex: 0 1 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 430px;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.personal-information {
+    width: 85%;
+    min-height: 65px;
+    margin: 25px auto;
+    padding: 22px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(190, 190, 210, 0.3);
+    box-shadow: 0 8px 25px rgba(80, 80, 110, 0.06);
+    backdrop-filter: blur(12px);
+}
+
+.home-button {
+    margin-top: 30px;
+}
+
+.home-button label {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: linear-gradient(120deg, #e8c6d6, #c8d9ef);
+    color: #292733;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(100, 100, 130, 0.12);
+    transition: 0.3s ease;
+}
+
+.home-button label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 23px rgba(100, 100, 130, 0.2);
+}
+
+
+/* 6. ABOUT ME — EMERALD AND PEARL */
+
+.page-about {
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(169, 211, 191, 0.6), transparent 38%),
+        radial-gradient(ellipse at 95% 90%, rgba(204, 226, 216, 0.75), transparent 40%),
+        linear-gradient(135deg, #f9fff9, #e7f3ec);
+}
+
+.page-about::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 550px;
+    height: 550px;
+    right: -250px;
+    top: 100px;
+    border: 1px solid rgba(91, 143, 116, 0.15);
+    border-radius: 45% 55% 60% 40%;
+    transform: rotate(35deg);
+    pointer-events: none;
+}
+
+.about-introduction {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 35px;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 290px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(50, 90, 65, 0.15);
+}
+
+.myself,
+.my-interests,
+.hometown,
+.age,
+.things-i-love {
+    padding: 27px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid rgba(120, 160, 135, 0.22);
+    box-shadow: 0 8px 25px rgba(50, 90, 65, 0.07);
+    backdrop-filter: blur(12px);
+}
+
+.page-about h3 {
+    font-size: 23px;
+    color: #315e49;
+    margin-bottom: 13px;
+}
+
+.my-interests {
+    margin: 25px 0;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.things-i-love {
+    margin-top: 25px;
+}
+
+
+/* 7. EDUCATION — GLACIER BLUE AND PEARL */
+
+.page-education {
+    background:
+        radial-gradient(ellipse at 10% 15%, rgba(199, 225, 246, 0.8), transparent 38%),
+        radial-gradient(ellipse at 90% 85%, rgba(224, 215, 240, 0.5), transparent 38%),
+        linear-gradient(135deg, #fbfdff, #eaf4fc);
+}
+
+.page-education::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: auto -10% -120px;
+    height: 260px;
+    border-radius: 50% 50% 0 0;
+    background: rgba(180, 210, 235, 0.16);
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.education-card {
+    min-height: 250px;
+    padding: 32px 25px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(153, 190, 218, 0.4);
+    box-shadow: 0 12px 30px rgba(75, 115, 150, 0.1);
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 17px 35px rgba(75, 115, 150, 0.16);
+}
+
+.education-card h3 {
+    color: #345c7c;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+/* 8. SKILLS — AMETHYST, GLACIER AND GOLD */
+
+.page-skills {
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(220, 202, 244, 0.75), transparent 38%),
+        radial-gradient(ellipse at 95% 90%, rgba(232, 219, 190, 0.45), transparent 40%),
+        linear-gradient(135deg, #fffdfd, #f0eafa);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.skills-group > h3 {
+    color: #51446b;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    margin-bottom: 18px;
+    padding: 23px 25px;
+    border-radius: 20px;
+    background: linear-gradient(
+        125deg,
+        rgba(220, 234, 243, 0.95),
+        rgba(255, 253, 248, 0.95) 55%,
+        rgba(235, 220, 187, 0.65)
+    );
+    border: 1px solid rgba(180, 169, 198, 0.35);
+    box-shadow: 0 8px 22px rgba(90, 75, 120, 0.08);
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(90, 75, 120, 0.14);
+}
+
+.skill-card h4 {
+    font-size: 19px;
+    color: #24232a;
+    margin-bottom: 9px;
+}
+
+
+/* 9. PROJECTS — MOONSTONE AND TIGER'S EYE */
+
+.page-projects {
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(211, 225, 228, 0.8), transparent 38%),
+        radial-gradient(ellipse at 95% 90%, rgba(225, 197, 155, 0.4), transparent 40%),
+        linear-gradient(135deg, #fffdf9, #edf3f3);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    overflow: hidden;
+    padding: 18px;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(174, 159, 133, 0.3);
+    box-shadow: 0 10px 28px rgba(85, 75, 60, 0.09);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px rgba(85, 75, 60, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: #9a713d;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.project-card h4 {
+    color: #303038;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 17px;
+    border-radius: 20px;
+    background: #e9d8bd;
+    color: #49351d;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.project-card a:hover {
+    background: #d8bd96;
+}
+
+
+/* 10. ACHIEVEMENTS — CHAMPAGNE GOLD AND IVORY */
+
+.page-achievements {
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(240, 222, 184, 0.65), transparent 38%),
+        radial-gradient(ellipse at 95% 90%, rgba(255, 238, 207, 0.7), transparent 40%),
+        linear-gradient(135deg, #fffefa, #f8f1e5);
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.achievement-card {
+    padding: 18px;
+    text-align: center;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(190, 160, 105, 0.3);
+    box-shadow: 0 10px 28px rgba(110, 85, 45, 0.08);
+    transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 32px rgba(110, 85, 45, 0.14);
+}
+
+.achievement-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fffdf8;
+    margin-bottom: 18px;
+}
+
+.achievement-card h3 {
+    font-size: 20px;
+    color: #75582e;
+    margin-bottom: 8px;
+}
+
+.achievement-card p {
+    color: #777064;
+    font-size: 14px;
+}
+
+
+/* 11. CONTACT — SAPPHIRE, SILVER AND PEARL */
+
+.page-contact {
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(195, 220, 245, 0.75), transparent 38%),
+        radial-gradient(ellipse at 95% 90%, rgba(210, 222, 240, 0.65), transparent 40%),
+        linear-gradient(135deg, #fcfdff, #eaf2fb);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin: 40px 0;
+}
+
+.contact-card {
+    padding: 23px 15px;
+    text-align: center;
+    border-radius: 19px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(130, 160, 200, 0.3);
+    box-shadow: 0 8px 22px rgba(60, 90, 130, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.contact-card h3 {
+    color: #345b87;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 13px;
+    color: #555e6b;
+}
+
+
+/* Contact message form */
+
+.message-form {
+    width: min(100%, 700px);
+    margin: 55px auto 10px;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(130, 160, 200, 0.3);
+    box-shadow: 0 12px 30px rgba(60, 90, 130, 0.09);
+}
+
+.message-form h3 {
+    color: #345b87;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.message-form label {
+    display: block;
+    color: #414957;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d4dfeb;
+    border-radius: 12px;
+    background: rgba(250, 252, 255, 0.9);
+    color: #252a33;
+    font: inherit;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+    border-color: #789bc5;
+    box-shadow: 0 0 0 3px rgba(120, 155, 197, 0.15);
+}
+
+.message-form textarea {
+    resize: vertical;
+}
+
+.message-form button {
+    margin-top: 20px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #b9cce5, #d9e4f2);
+    color: #253b57;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.message-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(60, 90, 130, 0.15);
+}
+
+
+/* 12. FOOTER */
+
+#footer {
+    width: 100%;
+    padding: 25px 15px;
+    text-align: center;
+    color: #777681;
+    font-size: 13px;
+}
+
+#footer p {
+    margin: 0;
+}
+
+
+/* 13. TABLET RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1000px) {
+
+    #header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #nav ul {
+        gap: 4px;
+    }
+
+    .page-view {
+        padding: 50px 35px;
+    }
+
+    .education-container,
+    .projects-container,
+    .achievements-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* 14. MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 650px) {
+
+    #header {
+        width: 94%;
+        padding: 18px 12px;
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    #nav ul {
+        gap: 3px;
+    }
+
+    #nav label {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+    .page-view {
+        width: 94%;
+        min-height: 550px;
+        margin: 15px auto;
+        padding: 40px 20px;
+        border-radius: 22px;
+    }
+
+    .page-view > h2 {
+        font-size: 31px;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .home-introduction h1 {
+        font-size: 43px;
+    }
+
+    .home-introduction h2 {
+        font-size: 19px;
+    }
+
+    .home-image {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .home-image img {
+        max-width: 270px;
+        max-height: 330px;
+    }
+
+    .personal-information {
+        width: 100%;
+    }
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        width: min(100%, 260px);
+        margin: 0 auto;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .education-container,
+    .skills-container,
+    .projects-container,
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        min-height: auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .message-form {
+        padding: 23px 18px;
+    }
+
+}
+
+
+/* 15. SMALL MOBILE SCREENS */
+
+@media screen and (max-width: 380px) {
+
+    #nav label {
+        padding: 6px 7px;
+        font-size: 10px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-introduction h1 {
+        font-size: 36px;
+    }
+
+}
+
+/* Hide the gallery by default */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(36, 35, 42, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+/* Show the gallery only when "View My Project" is clicked */
+.gallery-modal:target {
+    display: block;
+}
+
+.gallery-content {
+    background: #fffdfb;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-content h2 {
+    margin-bottom: 20px;
+    color: #292733;
+}
+
+.gallery-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(50, 50, 70, 0.1);
+}
+
+.close-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: #e8c6d6;
+    color: #292733;
+    font-weight: 700;
+}
+
+.close-btn:hover {
+    background: #c8d9ef;
+}
+

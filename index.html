@@ -1,0 +1,693 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>My Personal Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- CSS-only page navigation -->
+    <style>
+
+        .page-selector {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .page-view {
+            display: none;
+        }
+
+        #page-home:checked ~ #page-wrapper .page-home,
+        #page-about:checked ~ #page-wrapper .page-about,
+        #page-education:checked ~ #page-wrapper .page-education,
+        #page-skills:checked ~ #page-wrapper .page-skills,
+        #page-projects:checked ~ #page-wrapper .page-projects,
+        #page-achievements:checked ~ #page-wrapper .page-achievements,
+        #page-contact:checked ~ #page-wrapper .page-contact {
+            display: block;
+        }
+
+        .page-navigation label {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Page Selection Controls -->
+
+    <input type="radio" name="portfolio-page"
+           id="page-home" class="page-selector" checked>
+
+    <input type="radio" name="portfolio-page"
+           id="page-about" class="page-selector">
+
+    <input type="radio" name="portfolio-page"
+           id="page-education" class="page-selector">
+
+    <input type="radio" name="portfolio-page"
+           id="page-skills" class="page-selector">
+
+    <input type="radio" name="portfolio-page"
+           id="page-projects" class="page-selector">
+
+    <input type="radio" name="portfolio-page"
+           id="page-achievements" class="page-selector">
+
+    <input type="radio" name="portfolio-page"
+           id="page-contact" class="page-selector">
+
+
+    <!-- Main Page Wrapper -->
+
+    <div id="page-wrapper">
+
+
+        <!-- Header and Navigation -->
+
+        <header id="header">
+
+            <div class="logo">
+                <h2>SAYA</h2>
+            </div>
+
+            <nav id="nav" class="page-navigation">
+
+                <ul>
+                    <li>
+                        <label for="page-home">Home</label>
+                    </li>
+
+                    <li>
+                        <label for="page-about">About Me</label>
+                    </li>
+
+                    <li>
+                        <label for="page-education">Education</label>
+                    </li>
+
+                    <li>
+                        <label for="page-skills">Skills</label>
+                    </li>
+
+                    <li>
+                        <label for="page-projects">Projects</label>
+                    </li>
+
+                    <li>
+                        <label for="page-achievements">Achievements</label>
+                    </li>
+
+                    <li>
+                        <label for="page-contact">Contact</label>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+        <!-- Main Content -->
+
+        <main>
+
+
+            <!-- 1. HOME PAGE -->
+
+            <section class="page-view page-home">
+
+                <div class="home-content">
+
+                    <div class="home-introduction">
+
+                        <h2>Welcome to My Portfolio</h2>
+
+                        <h1>Thesanya Wijeratne</h1>
+
+                        <p>Computer Science Undergraduate</p>
+
+                    </div>
+
+
+                    <div class="home-image">
+
+                        <img src="C:\Users\Thesanya\Downloads\Untitled-1.jpg"
+                             alt="My Profile Picture">
+
+                    </div>
+
+                </div>
+
+
+                <div class="personal-information">
+
+                    My name is Thesanya Wijeratne, and I am a Computer Information Systems undergraduate. 
+                    I have a strong passion for technology and programming, 
+                    and I am constantly seeking opportunities to learn and grow in the field. 
+                    This portfolio showcases my skills, projects, and achievements, 
+                    providing insight into my journey as a Business Analyst in Japan.
+
+                </div>
+
+
+                <div class="home-button">
+
+                    <label for="page-about">
+                        Get to Know Me
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 2. ABOUT ME PAGE -->
+
+            <section class="page-view page-about">
+
+                <h2>About Me</h2>
+
+                <div class="about-introduction">
+
+                    <div class="about-image">
+
+                        <img src="C:\Users\Thesanya\Downloads\Untitled-1.jpg"
+                             alt="About Me">
+
+                    </div>
+
+                    <div class="myself">
+
+                        <h3>Myself</h3>
+
+                        <p>
+                            I am Thesanya Wijeratne. I am 21 years old and a university student. 
+                            I am a LNBTI student in Computer Information Systems.My hometown is Galle,
+                            but  currently live in Colombo. I am a passionate and decicated individual 
+                            who is always eagar to learn  languages and technologies. One day I aspire to become a successful
+                             Business Analyst in Japan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="my-interests">
+
+                    <h3>My Interests</h3>
+
+                    <p>
+                        My interests are learning new technologies, languages, and exploring the world of business analysis with a focus on Japan.
+                        I enjoy staying up-to-date with the latest trends in technology and finding innovative solutions to complex problems.
+                        In my free time, I like to read books, watch documentaries, and engage in activities that challenge my mind and creativity.
+                        Also I am interested in Japanese culture and language,
+                        and I am actively working on improving my proficiency 
+                        in Japanese to enhance my career prospects in Japan. And I want explore new unknown things in this world to gain my knwledge and experience. 
+                        I am also interested in traveling and experiencing different cultures, 
+                        as it broadens my perspective and helps me grow as an individual.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-details">
+
+                    <div class="hometown">
+
+                        <h3>Hometown</h3>
+
+                        <p>My hometown is Galle.</p>
+
+                    </div>
+
+
+                    <div class="age">
+
+                        <h3>Age</h3>
+
+                        <p>My age is 21</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="things-i-love">
+
+                    <h3>Things I Love</h3>
+
+                    <p>Things I love are reading books, watching documentaries, and exploring new technologies.
+                        Watch films with full of gore scenes and action. It gives me to feel the thrill and excitement. Example films or drams that
+                        full of gore scenes are Sweet Home,The Walking Dead,
+                        The Last of Us, Resident Evil, and many more. And I love write novels and short stories. It gives me to express my thoughts and ideas in a creative way.
+                        Example novels Cradle of Abyss and many more. Example video games that i love to play are Call of Duty and mny more.
+                     
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 3. EDUCATION PAGE -->
+
+            <section class="page-view page-education">
+
+                <h2>My Education</h2>
+
+                <div class="education-container">
+
+
+                    <div class="education-card">
+
+                        <h3>University Education</h3>
+
+                        <p>
+                            My univeraity is Lanka Nippon Biztech University. I am a LNBTI student in Computer Information Systems.
+                        </p>
+
+                    </div>
+
+
+                    <div class="education-card">
+
+                        <h3>School Education</h3>
+
+                        <p>
+                            My school is Sangamitta Balika Vidyalaya, Galle. I completed my primary and secondary education there from grade 1 to 13.
+                            Ilove my school because it gave me a strong foundation in academics and helped me develop important life skills. 
+                        </p>
+
+                    </div>
+
+
+                    <div class="education-card">
+
+                        <h3>Additional Learning</h3>
+
+                        <p>
+                            I have also comoleted international exams. Example exams are Cambridge English, Japanese Proficency Test N5 and N4, Chinese HSK 1 (Beginner), HSK 2 (Elementary), and HSK 3 (Intermediate with speaking). 
+                            And British CouncilEnglish Language Assessment (B1) and many more.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 4. SKILLS PAGE -->
+
+            <section class="page-view page-skills">
+
+                <h2>My Skills</h2>
+
+                <p>
+                    A collection of my knowledge, abilities and strengths.
+                </p>
+
+
+                <div class="skills-container">
+
+
+                    <div class="skills-group">
+
+                        <h3>Technical Skills</h3>
+
+
+                        <div class="skill-card">
+
+                            <h4>Programming Languages</h4>
+
+                            <p>Skills are Python, Java,HTML, CSS, and JavaScript.</p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <h4>Web Development</h4>
+
+                            <p>Skills include responsive design, RESTful APIs, and version control. CSS and HTML.</p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <h4>Database Management</h4>
+
+                            <p>Skills include SQL, NoSQL databases, and data PostgreSQL.</p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <h4>Software &amp; Tools</h4>
+
+                            <p>Skills are Visual Studio Code (VS Code),Git and GitHub,PostgreSQL,
+                               pgAdmin, Microsoft Word,Microsoft PowerPoint, Adobe Photoshop</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skills-group">
+
+                        <h3>Other Skills</h3>
+
+
+                        <div class="skill-card">
+
+                            <h4>Languages</h4>
+
+                            <p>Languages are English, Japanese,Chinese, Korean and Hindi.</p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <h4>Personal Skills</h4>
+
+                            <p>Skills are communication, teamwork, leadership, and problem-solving.</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 5. PROJECTS PAGE -->
+
+            
+<section class="page-view page-projects">
+
+    <h2>My Projects</h2>
+
+    <p>A showcase of my work and creativity.</p>
+
+    <div class="projects-container">
+
+        <!-- Project 01 -->
+        <div class="project-card">
+
+            <img src="C:\Users\Thesanya\Downloads\download.webp"
+                 alt="Personal Portfolio Website">
+
+            <h3>Project 01</h3>
+
+            <h4>Personal Portfolio Website</h4>
+
+            <p>
+                A personal portfolio website developed using
+                HTML5 and CSS3 to showcase my background,
+                education, technical skills, projects and
+                achievements.
+            </p>
+
+            <a href="#" target="_blank">View My Project</a>
+
+        </div>
+
+        <!-- Project 02 -->
+       
+<!-- Project 02 -->
+<div class="project-card">
+
+    <img src="C:\Users\Thesanya\Downloads\download (8).jpeg"
+         alt="Smart Book Management System">
+
+    <h3>Project 02</h3>
+
+    <h4>Smart Book Management System</h4>
+
+    <p>
+        A database management system designed to
+        manage book information, authors and borrowing
+        records using PostgreSQL.
+    </p>
+
+    <a href="#project02-details">View My Project</a>
+
+</div>
+
+
+
+        <!-- Project 03 -->
+        <div class="project-card">
+
+            <img src="C:\Users\Thesanya\Downloads\download (1).webp"
+                 alt="Project 03">
+
+            <h3>Project 03</h3>
+
+            <h4>Coming Soon</h4>
+
+            <p>
+                Another project will be added to this
+                portfolio in the future.
+            </p>
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+            <!-- 6. ACHIEVEMENTS PAGE -->
+
+            <section class="page-view page-achievements">
+
+                <h2>My Achievements</h2>
+
+                <p>
+                    A collection of my certificates and accomplishments.
+                </p>
+
+
+                <div class="achievements-container">
+
+
+                    <div class="achievement-card">
+
+                        <img src="C:\Users\Thesanya\Downloads\WhatsApp Unknown 2026-11-22 at 20.23.57\WhatsApp Image 2026-11-22 at 20.23.35 (1).jpeg"
+                             alt="Certificate 1">
+
+                        <h3>Cambridge College</h3>
+
+                        <p>2022</p>
+
+                    </div>
+
+
+
+                    <div class="achievement-card">
+
+                        <img src="C:\Users\Thesanya\Downloads\WhatsApp Unknown 2026-11-22 at 20.23.57\WhatsApp Image 2026-11-22 at 20.23.35.jpeg"
+                             alt="Certificate 2">
+
+                        <h3>Japanese Proficiency Test JLPT N4</h3>
+
+                        <p>2024</p>
+
+                    </div>
+
+
+
+                    <div class="achievement-card">
+
+                        <img src="C:\Users\Thesanya\Downloads\WhatsApp Unknown 2026-11-22 at 20.23.57\WhatsApp Image 2026-11-22 at 20.23.37.jpeg"
+                             alt="Certificate 3">
+
+                        <h3>Chinese Proficiency test HSK 1 - Beginner</h3>
+
+                        <p>2023</p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 7. CONTACT PAGE -->
+
+            <section class="page-view page-contact">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    I'd love to hear from you. Feel free to contact me!
+                </p>
+
+
+                <div class="contact-container">
+
+
+                    <div class="contact-card">
+
+                        <h3>Email</h3>
+
+                        <a href="mailto:mountfuji2739@gmail.com" target="_blank" rel="noopener noreferrer">
+                            mountfuji2739@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <h3>LinkedIn</h3>
+
+                        <a href="https://www.linkedin.com/in/thesanya-wijeratne-a79893355/" target="_blank" rel="noopener noreferrer">
+                            https://www.linkedin.com/in/thesanya-wijeratne-a79893355/
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <h3>GitHub</h3>
+
+                        <a href="https://github.com/mountfuji2739-art" target="_blank" rel="noopener noreferrer">
+                            https://github.com/mountfuji2739-art
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <h3>Location</h3>
+
+                        <p>Galle, Sri Lanka</p>
+                        <p>Colombo, Sri Lanka</p>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <h3>WhatsApp</h3>
+
+                        <a href="https://wa.me/9477786910" target="_blank" rel="noopener noreferrer">
+                            https://wa.me/9477786910
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Message Form -->
+
+                <div class="message-form">
+
+                    <h3>Send Me a Message</h3>
+
+                    <form action="#" method="post">
+
+                        <label for="name">Name</label>
+
+                        <input type="text" id="name"
+                               name="name" required>
+
+
+                        <label for="email">Email</label>
+
+                        <input type="email" id="email"
+                               name="email" required>
+
+
+                        <label for="message">Message</label>
+
+                        <textarea id="message" name="message"
+                                  rows="5" required></textarea>
+
+
+                        <button type="submit">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+                </main>
+
+    </div> <!-- End of #page-wrapper -->
+
+    <!-- Hidden Pop-up Gallery -->
+    <div id="project02-details" class="gallery-modal">
+      <div class="gallery-content">
+        <a href="#close" class="close-btn">&times; Close</a>
+        <h2>Smart Book Management System</h2>
+        <img src="C:\Users\Thesanya\OneDrive\Pictures\Screenshots\after index.png" alt="Project screenshot 1">
+        <img src="C:\Users\Thesanya\OneDrive\Pictures\Screenshots\before index.png" alt="Project screenshot 2">
+        <img src="C:\Users\Thesanya\OneDrive\Pictures\Screenshots\index .png" alt="Project screenshot 3">
+      </div>
+    </div>
+
+
+
+
+
+        <!-- Footer -->
+
+        <footer id="footer">
+
+            <p>
+                &copy; 2026 My Personal Portfolio.
+                All Rights Reserved.
+            </p>
+
+        </footer>
+
+
+    </div>
+
+</body>
+</html>
